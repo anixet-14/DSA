@@ -16,7 +16,7 @@ int firstOcc(int arr[], int key, int size) { //Using Binary Search
         
         if (key == arr[mid]) {
             answer = mid;
-            high = mid-1;
+            high = mid-1; //If element is found, it'll shift end to left of mid and again check if same element is present at left or not to get leftmost element, i.e., first occurrences.
         }
         else if (key > arr[mid]) {
             low = mid + 1;
@@ -38,7 +38,7 @@ int lastOcc(int arr[], int key, int size) { //Using Binary Search
     
         if (key == arr[mid]) {
             answer = mid;
-            low = mid+1;
+            low = mid+1; //If element is found, it'll shift start to right of mid and again check if same element is present at right or not to get rightmost element, i.e., last occurrences.
         }
         else if (key > arr[mid]) {
             low = mid + 1;
